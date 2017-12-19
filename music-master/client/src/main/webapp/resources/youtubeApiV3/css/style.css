@@ -1,0 +1,167 @@
+/*import font style*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700%7CRaleway:700);
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: "Open Sans", sans-serif;
+	line-height: 1.6em;
+	background: url(https://preview.ibb.co/gwLfvG/bg2.jpg) repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+	font-size: 14px;
+}
+
+a{
+	color: #feb41c;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	    -webkit-transition: all 0.3s ease;
+	    -o-transition: all 0.3s ease;
+}
+
+a:hover{
+	color: #333;
+}
+
+#container {
+	width: 1170px;
+	background: rgba(255, 255, 255, 0.2);
+	margin: auto;
+	box-shadow: 0px 2px 30px rgba(255, 255, 255, 0.8);
+	    -moz-box-shadow: 0px 2px 30px rgba(255, 255, 255, 0.8);
+	    -webkit-box-shadow: 0px 2px 30px rgba(255, 255, 255, 0.8);
+	    -o-box-shadow: 0px 2px 30px rgba(255, 255, 255, 0.8);
+	    -ms-box-shadow: 0px 2px 30px rgba(255, 255, 255, 0.8);
+	}
+
+.clearfix {
+	clear: both;
+}
+
+header{
+	background: url(../image/Youtube-Logo-Wallpaper.jpg) no-repeat center;
+	background-size: cover;
+	height: 300px;
+}
+
+section{
+	padding: 30px;
+}
+
+footer{
+	font-size: 12px;
+	font-style: italic;
+	background: rgba(255, 255, 255, 0.2);
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	text-align: center;
+}
+
+.field-container{
+  	width: 800px;
+  	display: block;
+  	margin: 0 auto;
+}
+
+.search-field{
+	width: 50%;
+	height: 45px;
+	padding: 0 20px;
+	font-size: 1rem;
+	outline: none;
+  	border: 2px solid #fff;
+  	margin: 0 auto;
+  	display: block;
+  	box-shadow: 0px 2px 30px rgba(254, 180, 28, 0.8);
+	    -moz-box-shadow: 0px 2px 30px rgba(254, 180, 28, 0.8);
+	    -webkit-box-shadow: 0px 2px 30px rgba(254, 180, 28, 0.8);
+	    -o-box-shadow: 0px 2px 30px rgba(254, 180, 28, 0.8);
+	    -ms-box-shadow: 0px 2px 30px rgba(254, 180, 28, 0.8);
+}
+
+.search-field:focus{
+    border: 2px solid rgba(254, 180, 28, 0.8);
+ }
+
+ #search-btn{
+ 	background: url(../image/search-icon.png);
+ 	background-size: cover;
+ 	position: relative;
+  	float: right;
+  	width: 75px;
+  	height: 75px;
+  	top: -62px;
+  	right: 170px;
+  	cursor: pointer;
+  	border: none;
+  	outline: none;
+	 margin-right: 11px;
+ }
+
+#results li{
+	padding: 10px;
+	border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+	list-style: none;
+	overflow: auto;
+	color: #fff;
+	transition: all 0.5s ease;
+	    -webkit-transition: all 0.5s ease;
+	    -o-transition: all 0.5s ease;
+}
+
+#results li:hover{
+	background: rgba(255, 255, 255, 0.2);
+	-ms-transform: scale(1.055);
+    -webkit-transform: scale(1.055);
+    transform: scale(1.055);
+}
+
+.list-left{
+	float: left;
+	width: 20%;
+}
+
+.list-left img{
+	width: 100%;
+	border: 5px solid #fff;
+}
+
+.list-right{
+	float: right;;
+	width: 78%;
+}
+
+.cTitle{
+	color: #3ec6e2;
+	font-weight: bold;
+}
+
+.button-container{
+	margin-top: 25px;
+	display: block;
+}
+
+.paging-button{
+	background: #feb41c;
+	padding: 10px 30px;
+	border-radius: 30px;
+	margin: 0 5px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+
+.paging-button:hover{
+	box-shadow: 0px 2px 30px rgba(255, 255, 255, 0.8);
+	    -moz-box-shadow: 0px 2px 30px rgba(255, 255, 255, 0.8);
+	    -webkit-box-shadow: 0px 2px 30px rgba(255, 255, 255, 0.8);
+	    -o-box-shadow: 0px 2px 30px rgba(255, 255, 255, 0.8);
+	    -ms-box-shadow: 0px 2px 30px rgba(255, 255, 255, 0.8);
+}

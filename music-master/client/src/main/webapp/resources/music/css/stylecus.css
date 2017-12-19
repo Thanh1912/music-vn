@@ -1,0 +1,87 @@
+@CHARSET "ISO-8859-1";
+
+.nav-xs .text-lt {
+    color: #ffffff !important;
+    height: 60px;
+    padding: 17px;
+}
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.artist-page{
+    background-color: white;
+    padding-left: 83px;
+    width: 900px;
+    margin-left: 20px;
+}
+
+.padder-v {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.iframe-youtube{
+    width:99%;
+    height: 100%;
+}
+.grey{
+    background-color: navajowhite;
+}
+
+#btn-youtube{
+    margin-left: 742px;
+    margin-top: 10px;
+}
+#video-youtube{
+    position: absolute;
+    width: 93%;
+    height:calc(100% - 100px);
+    z-index: 10000;
+}
+/*calc(100% - 480px);*/
+#list-result-song{
+    position: absolute;
+    background-color: white;
+    max-height: 400px;
+    overflow: auto;
+    min-width: 900px;
+}
+.list-group-item > li :hover{
+    background-color: darkgray;
+    color: white;
+}
+
+.dropfile img{
+    width: 250px;
+    height: 250px;
+}
+#list-kind-of-music a{
+    cursor: pointer;
+}
+.list-group-item:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: darkgray;
+    border-color: #428bca;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

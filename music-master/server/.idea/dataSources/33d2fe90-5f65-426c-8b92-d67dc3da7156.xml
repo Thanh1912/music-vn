@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="music@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="music">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="company"/>
+    <schema id="4" parent="1" name="ex1"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="sakila"/>
+    <schema id="9" parent="1" name="sys"/>
+    <schema id="10" parent="1" name="world"/>
+    <table id="11" parent="2" name="album"/>
+    <table id="12" parent="2" name="album_song"/>
+    <table id="13" parent="2" name="artist"/>
+    <table id="14" parent="2" name="artist_song"/>
+    <table id="15" parent="2" name="historyactivity"/>
+    <table id="16" parent="2" name="kindofmusic"/>
+    <table id="17" parent="2" name="likesong"/>
+    <table id="18" parent="2" name="song"/>
+    <table id="19" parent="2" name="user"/>
+    <table id="20" parent="2" name="user_roles"/>
+    <column id="21" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="22" parent="11" name="createdAt">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="23" parent="11" name="modifiedAt">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="24" parent="11" name="name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="25" parent="11" name="poster">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="26" parent="11" name="by_user_id">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="27" parent="11" name="FK_htsygggvh07inctygc63bamrd">
+      <ColNames>by_user_id</ColNames>
+    </index>
+    <key id="28" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="29" parent="11" name="FK_htsygggvh07inctygc63bamrd">
+      <ColNames>by_user_id</ColNames>
+      <RefSchemaName>music</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="30" parent="12" name="album_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="12" name="song_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="32" parent="12" name="FK_c1lgslygu8gplhop4c3r9152m">
+      <ColNames>album_id</ColNames>
+    </index>
+    <index id="33" parent="12" name="FK_dwi1x647rism04u338q55m3vt">
+      <ColNames>song_id</ColNames>
+    </index>
+    <foreign-key id="34" parent="12" name="FK_c1lgslygu8gplhop4c3r9152m">
+      <ColNames>album_id</ColNames>
+      <RefSchemaName>music</RefSchemaName>
+      <RefTableName>album</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="35" parent="12" name="FK_dwi1x647rism04u338q55m3vt">
+      <ColNames>song_id</ColNames>
+      <RefSchemaName>music</RefSchemaName>
+      <RefTableName>song</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="36" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="13" name="createdAt">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="38" parent="13" name="image">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="39" parent="13" name="modifiedAt">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="40" parent="13" name="name">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="41" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="42" parent="14" name="Song_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="14" name="Artist_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="44" parent="14" name="FK_ihye2u28eg4utdu8n77361vm0">
+      <ColNames>Song_id</ColNames>
+    </index>
+    <index id="45" parent="14" name="FK_js07j5jed3oiojjnpems81eyl">
+      <ColNames>Artist_id</ColNames>
+    </index>
+    <foreign-key id="46" parent="14" name="FK_ihye2u28eg4utdu8n77361vm0">
+      <ColNames>Song_id</ColNames>
+      <RefSchemaName>music</RefSchemaName>
+      <RefTableName>song</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="47" parent="14" name="FK_js07j5jed3oiojjnpems81eyl">
+      <ColNames>Artist_id</ColNames>
+      <RefSchemaName>music</RefSchemaName>
+      <RefTableName>artist</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="48" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="49" parent="15" name="createdAt">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="50" parent="15" name="modifiedAt">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="51" parent="15" name="nameAction">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="52" parent="15" name="song_id">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="53" parent="15" name="FK_324axgjmxm3ti9giahq9lxka3">
+      <ColNames>song_id</ColNames>
+    </index>
+    <key id="54" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="55" parent="15" name="FK_324axgjmxm3ti9giahq9lxka3">
+      <ColNames>song_id</ColNames>
+      <RefSchemaName>music</RefSchemaName>
+      <RefTableName>song</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="56" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="57" parent="16" name="createdAt">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="58" parent="16" name="image">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="59" parent="16" name="modifiedAt">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="60" parent="16" name="name">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="61" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="62" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="63" parent="17" name="createdAt">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="64" parent="17" name="isLike">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="17" name="modifiedAt">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="66" parent="17" name="song_id">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="17" name="user_id">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="68" parent="17" name="FK_k0vgaxg0umm019uroiikjk7ju">
+      <ColNames>user_id</ColNames>
+    </index>
+    <index id="69" parent="17" name="FK_kfj8q950g5bj0dcg7w709kacj">
+      <ColNames>song_id</ColNames>
+    </index>
+    <key id="70" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="71" parent="17" name="FK_kfj8q950g5bj0dcg7w709kacj">
+      <ColNames>song_id</ColNames>
+      <RefSchemaName>music</RefSchemaName>
+      <RefTableName>song</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="72" parent="17" name="FK_k0vgaxg0umm019uroiikjk7ju">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>music</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="73" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="74" parent="18" name="countWatch">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="75" parent="18" name="createdAt">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="76" parent="18" name="hostMovieId">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="77" parent="18" name="modifiedAt">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="78" parent="18" name="name">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="79" parent="18" name="poster">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="80" parent="18" name="thumb">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="81" parent="18" name="kindofmusic_id">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="82" parent="18" name="user_id">
+      <Position>10</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="83" parent="18" name="FK_bi3p2tbdde5ln8qm6ajki91uh">
+      <ColNames>kindofmusic_id</ColNames>
+    </index>
+    <index id="84" parent="18" name="FK_ep83shu9r4yryum6oxuyufof0">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="85" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="86" parent="18" name="FK_bi3p2tbdde5ln8qm6ajki91uh">
+      <ColNames>kindofmusic_id</ColNames>
+      <RefSchemaName>music</RefSchemaName>
+      <RefTableName>kindofmusic</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="87" parent="18" name="FK_ep83shu9r4yryum6oxuyufof0">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>music</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="88" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="89" parent="19" name="createdAt">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="90" parent="19" name="email">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="19" name="image">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="92" parent="19" name="modifiedAt">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="93" parent="19" name="password">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="94" parent="19" name="username">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="95" parent="19" name="UK_ob8kqyqqgmefl0aco34akdtpe">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="96" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="97" parent="19" name="UK_ob8kqyqqgmefl0aco34akdtpe">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>UK_ob8kqyqqgmefl0aco34akdtpe</UnderlyingIndexName>
+    </key>
+    <column id="98" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="99" parent="20" name="role">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="100" parent="20" name="role_id">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="101" parent="20" name="FK_5q4rc4fh1on6567qk69uesvyf">
+      <ColNames>role_id</ColNames>
+    </index>
+    <key id="102" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="103" parent="20" name="FK_5q4rc4fh1on6567qk69uesvyf">
+      <ColNames>role_id</ColNames>
+      <RefSchemaName>music</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
